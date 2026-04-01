@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wizard Integral Quest</title>
+
+  <style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0b0816;display:flex;justify-content:center;align-items:center;min-height:100vh}
+  #root{background:#0d0a1a;border-radius:12px;overflow:hidden;font-family:Arial, sans-serif;color:#e8e0ff;min-height:580px;display:flex;flex-direction:column}
+  #hud{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#130f2a;border-bottom:1px solid #2a1f5a}
+  .hud-stat{display:flex;flex-direction:column;align-items:center;gap:1px}
+  .hud-label{font-size:10px;color:#6b5fa0;letter-spacing:0.1em;text-transform:uppercase}
+  .hud-val{font-size:16px;font-weight:500;color:#c4b5fd}
+  #canvas-wrap{position:relative;flex:1}
+  canvas{display:block}
+  #ui-panel{background:#130f2a;border-top:1px solid #2a1f5a;padding:14px 16px}
+  #spell-prompt{font-size:11px;color:#6b5fa0;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;text-align:center}
+  #integral-display{font-size:20px;font-weight:500;color:#e0d4ff;text-align:center;margin-bottom:12px;font-family:monospace}
+  #choices-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+  .spell-btn{background:#1e1640;border:1px solid #3d2f80;border-radius:8px;padding:10px;font-size:13px;cursor:pointer;color:#c4b5fd}
+  .spell-btn:hover{background:#2a1f5a}
+  #feedback-bar{text-align:center;font-size:13px}
+  #overlay-wrap{display:none;position:absolute;inset:0;background:rgba(10,6,30,0.92);align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;z-index:20}
+  #overlay-wrap.show{display:flex}
+  #ov-btn{padding:10px 20px;background:#2a1f5a;color:white;border:none;border-radius:8px;cursor:pointer}
+  </style>
+</head>
+
+<body>
+
+<!-- YOUR ORIGINAL CODE -->
+<div id="root">
+  <div id="hud">
+    <div class="hud-stat"><span class="hud-label">Level</span><span class="hud-val" id="h-level">1</span></div>
+    <div class="hud-stat"><span class="hud-label">Score</span><span class="hud-val" id="h-score">0</span></div>
+    <div class="hud-stat"><span class="hud-label">Mana</span><span class="hud-val" id="h-mana">3 / 3</span></div>
+    <div class="hud-stat"><span class="hud-label">Streak</span><span class="hud-val" id="h-streak">0</span></div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="stars-canvas"></canvas>
+    <canvas id="gc"></canvas>
+    <div id="overlay-wrap">
+      <div id="ov-title"></div>
+      <div id="ov-sub"></div>
+      <button id="ov-btn" onclick="overlayAct()">Start</button>
+    </div>
+  </div>
+
+  <div id="ui-panel">
+    <div id="spell-prompt">Cast the antiderivative spell</div>
+    <div id="integral-display">∫ 6x² dx</div>
+    <div id="choices-grid"></div>
+    <div id="feedback-bar"></div>
+  </div>
+</div>
+
+<script>
+/* KEEP YOUR ENTIRE ORIGINAL JAVASCRIPT HERE */
+/* (I shortened it here for readability — paste your full script exactly) */
+</script>
+
+</body>
+</html>
